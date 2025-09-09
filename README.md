@@ -30,7 +30,7 @@ La idea surgió porque me encanta viajar y quería practicar **React** con algo 
 
 1. Clonar este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/playas-koh-tao.git
+   git clone https://github.com/soniaggo/playas-koh-tao.git
 2. Entrar en la carpeta:
 
 cd playas-koh-tao
