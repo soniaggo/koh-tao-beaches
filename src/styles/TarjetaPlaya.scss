@@ -1,163 +1,110 @@
-.card-container {
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  padding: 25px;
-  max-width: 900px;
-  margin: 40px auto;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  }
+
+.card-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 
   h2 {
-    color: #0077b6;
     margin-bottom: 16px;
-    font-size: 2.1rem;
+    color: #0077b6;
   }
-}
 
-.card-image {
-  width: 100%;
-  border-radius: 15px;
-  object-fit: cover;
-  height: 340px;
-}
+  .card-swiper {
+    margin-bottom: 20px;
 
-.card-description {
-  font-size: 1.05rem;
-  color: #444;
-  line-height: 1.6;
-  margin: 14px 0 10px;
-  text-align: left;
-}
+    .card-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
 
-.card-swiper {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto 1rem;
+  p {
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #444;
+  }
 
-  .swiper-slide {
+  .servicios {
+    margin: 16px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-}
+    gap: 20px;
+    flex-wrap: wrap;
 
-.servicios {
-  display: flex;
-  justify-content: space-around;
-  margin: 16px 0 24px;
-
-  .servicio {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    color: #666;
-
-    svg {
-      margin-right: 8px;
-    }
-
-    &.disabled {
-      opacity: 0.5;
+    .servicio {
+      font-size: 0.9rem;
+      color: #777;
+      opacity: 0.7;
       text-decoration: line-through;
     }
   }
-}
 
-/* Reseñas */
-.comentarios-section {
-  margin-top: 1.5rem;
-  text-align: left;
+  .comentarios {
+    margin-top: 20px;
+    text-align: left;
 
-  h3 {
-    color: #0077b6;
-    margin-bottom: 0.7rem;
-  }
-
-  .lista-comentarios {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1rem;
-
-    li {
-      background: #f9f9f9;
-      padding: 10px 12px;
+    h3 {
       margin-bottom: 10px;
-      border-radius: 8px;
-    }
-
-    .comentario-header {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 6px;
-
-      .fecha {
-        justify-self: start;
-        font-size: 0.85rem;
-        color: #777;
-      }
-
-      .estrellas {
-        justify-self: end;
-        display: flex;
-        gap: 6px;
-      }
-    }
-  }
-
-  .form-comentario {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    input,
-    textarea {
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-family: inherit;
+      font-size: 1.1rem;
+      color: #0077b6;
     }
 
     textarea {
-      resize: vertical;
+      width: 100%;
       min-height: 80px;
-    }
-
-    .selector-estrellas {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      margin: 4px 0 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      resize: vertical;
     }
 
     .btn-comentario {
-      align-self: flex-start;
-      background-color: #0077b6;
+      background: #0077b6;
       color: white;
       border: none;
-      padding: 10px 14px;
-      border-radius: 6px;
+      padding: 8px 12px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      margin-bottom: 12px;
 
       &:hover {
-        background-color: #005f8d;
+        background: #005f8d;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        background: #f1f1f1;
+        padding: 8px;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        font-size: 0.9rem;
       }
     }
   }
 }
 
-.no-images {
-  background: #f4f6f8;
-  padding: 14px;
-  border-radius: 10px;
-  margin-bottom: 12px;
+/* 📱 Responsive ajustes */
+@media (max-width: 600px) {
+  .card-container {
+    padding: 12px;
+
+    .card-swiper .card-image {
+      height: 220px;
+    }
+
+    .servicios {
+      gap: 10px;
+    }
+  }
 }
+
